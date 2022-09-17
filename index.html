@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Assignment-5</title>
+    <!-- bootstrap -->
+  <link rel="stylesheet" href="./assets/css/bootstrap-css/bootstrap.min.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.css">
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+</head>
+<body>
+   
+   <div class="container mt-2 ">
+      <header>
+         <div class="row bg-info text-uppercase text-center">
+            <div class="col-lg-12 col-sm-12">
+               <h1 class="p-3">Personal monthly account</h1>
+            </div>
+         </div>
+      </header>
+      
+      <div class="row gx-3 mt-3">
+         <!-- start left side only image / -->
+         <div class="col-lg-6 col-sm-12  bg-light">
+            
+          <div class="">
+             <div class="boximg mt-3">
+                <img class="img-thumbnail" src="/./assets/images/family-budget-planning.jpg" alt="">
+             </div>
+          </div>
+         </div>
+          <!-- end left side only image / -->
+          <!-- start right side/ -->
+         <div class="col-lg-6 col-sm-12 ps-3 ">
+            <h4 class="text-center mb-3">Income</h4>
+            <!--Start input string value error message handler -->
+            <div id="hide-alert14" class="alert alert-danger alert-dismissible fade show w-75 mx-auto" role="alert">
+               <strong>Please input the only number value</strong>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <!-- negative value error message hendle -->
+            <div id="hide-alert7" class="alert alert-warning alert-dismissible fade show w-75 mx-auto" role="alert">
+               <strong>negative value is not allowed</strong>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <!-- End input string value error message handler -->
+                       
+            <div class="mb-3 row">
+               <label for="income" class="col-sm-2 col-form-label">Income:</label>
+               <!-- income total money input -->
+               <div class="col-sm-10">
+
+                 <input type="text" class="form-control" id="income">
+
+               </div>
+             </div>
+           
+             <!-- Expenses all money -->
+             <!-- ..............FOOD..............  -->
+             <h4 class="text-center mb-3">Expenses</h4>
+            
+              <!--Start input string value error message handler -->
+              <div id="hide-alert11" class="alert alert-danger alert-dismissible fade show w-75 mx-auto" role="alert">
+               <strong>Please input the only number value</strong>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+            <!-- income field is not a number -->
+            <div id="hide-alert8" class="alert alert-warning alert-dismissible fade show w-75 mx-auto" role="alert">
+               <strong>negative value is not allowed</strong>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <!-- End input string value error message handler -->
+            
+             
+
+             <!-- Extra expense with income -->
+            <div class="mb-3 row">
+               <label for="food" class="col-sm-2 col-form-label">Food:</label>
+               <div class="col-sm-10">
+                  <!-- food expenses -->
+                 <input type="text" class="form-control" id="food">
+
+               </div>
+             </div>
+           
+           <!-- ................RENT...............? -->
+           
+           <div class="mb-3 row">
+            <label for="rent" class="col-sm-2 col-form-label">Rent:</label>
+            <div class="col-sm-10">
+               <!-- rent expenses -->
+              <input type="text" class="form-control" id="rent">
+
+            </div>
+          </div>
+           
+           <!-- ...............CLOTHES...............  -->
+
+           <div class="mb-3 row">
+            <label for="clothes" class="col-sm-2 col-form-label">Clothes:</label>
+            <div class="col-sm-10">
+               <!-- clothes expenses -->
+              <input type="text" class="form-control" id="clothes">
+
+            </div>
+          </div>
+            
+           
+           <!-- ........................................./  -->
+           <div class="d-flex flex-column align-items-center w-50 mx-auto">
+              <!-- all cost calculates -->
+              <button id="calculate" type="button" class="personal-style btn">Calculate</button>
+
+           </div>
+           <!-- Total Expenses and Balance -->
+           <div class="mt-3 mb-3">
+              <!--Start Expense Amount error message handler -->
+              <div id="hide-alert2" class="alert alert-danger alert-dismissible fade show w-75 mx-auto" role="alert">
+                 <strong>Costs are higher than your income</strong>
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+              <!-- End Expense Amount error message handler -->
+
+            <!-- output field Total Expenses -->
+            <h5 class="text-center">Total Expenses: 
+               <span id="expenses">0</span>
+            </h5>
+
+            <!-- output field Total Balance -->
+            <h5 class="text-center">Balance: 
+               <span id="balance">0</span>
+            </h5>
+
+           </div>
+
+           <!-- .................SAVINGS ACCOUNT ........  -->
+               
+          <!-- start input field with percent  -->
+           <div class="mb-3 row ms-lg-4">
+            <label class="col-2 col-form-label" for="percent">Save</label>
+            <div class="col-3">
+               <!-- input percent -->
+              <input type="text" class="form-control" id="percent">
+
+            </div>
+            <div class="col-2">
+               <h3>%</h3>
+            </div>
+            <div class="col-3">
+               <!-- save button  -->
+              <button class="personal-style-save btn" type="button" id="save">Save:</button>
+
+            </div>
+          </div>
+          <!-- Saving Amount and Remaining Balance -->
+          <!-- Star Saving Amount error message handler -->
+          <div id="hide-alert" class="alert alert-danger alert-dismissible fade show w-75 mx-auto" role="alert">
+            <strong>You don't have enough money to save</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <div id="hide-alert6" class="alert alert-danger alert-dismissible fade show w-75 mx-auto" role="alert">
+            
+            <strong>Please input the only number value</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <div id="hide-alert12" class="alert alert-info alert-dismissible fade show w-75 mx-auto" role="alert">
+            <strong>negative value is not allowed</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <!-- End Saving Amount error message handler -->
+          <h5 class="text-center">Saving Amount:
+             <!-- TOTAL SAVING MONEY  -->
+             <span id="savingamount">0</span>
+
+            </h5>
+            
+           <h5 class="text-center">Remaining Balance:
+              <!-- TOTAL REMAINING MONEY -->
+              <span id="remainingamount">0</span>
+
+            </h5>
+
+         </div>
+       </div>
+   </div>
+
+
+
+
+  <!-- ALL JQUERY LINK -->
+  <script src="./assets/js/saving.js"></script>
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>   
+</body>
+</html>

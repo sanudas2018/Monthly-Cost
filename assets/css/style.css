@@ -1,0 +1,72 @@
+@font-face {
+   src: url(../fonts/google-font/Poppins-Bold.ttf);
+   font-family: Poppins-Bold;
+}
+@font-face {
+   src: url(../fonts/google-font/Montserrat-Regular.ttf);
+   font-family: Montserrat-Regular;
+}
+
+
+h1{
+   font-family: Poppins-Bold;
+
+}
+.package-para-color{
+   color: #848199;
+}
+h2,
+h3,
+h4,
+h5{
+   font-family: Poppins-Bold;
+   color: #231D4F;
+   /* font-size: 2.5rem; */
+}
+p{
+   font-family: Montserrat-Regular;
+   font-size: 1.2rem;
+}
+
+/* button style start  */
+.personal-style{
+   background-color: #FF297D;
+   border-color: #FF297D;
+   color: white;
+   font-weight: bold;
+   width: 300px;
+}
+.personal-style-save{
+   background-color: #FF297D;
+   border-color: #FF297D;
+   color: white;
+   font-weight: bold;
+   width: 120px;
+}
+/* button style end  */
+/* All alert message style id  */
+#hide-alert12,
+#hide-alert11,
+#hide-alert8,
+#hide-alert7,
+#hide-alert6,
+#hide-alert4,
+#hide-alert3,
+#hide-alert2,
+#hide-alert{
+   display: none;
+}
+#hide-alert14{
+   display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
